@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boda de Sergio & Sonia</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="Nuestra boda. ¡Te esperamos!">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Pantalla de Bienvenida (Overlay para asegurar la música) -->
+    <div id="welcome-overlay" class="welcome-overlay">
+        <div class="welcome-content">
+            <p class="welcome-subtitle">Nuestra Boda</p>
+            <h1 class="welcome-title">Sonia & Sergio</h1>
+            <button id="btn-open-invite" class="btn-open-invite">Abrir Invitación</button>
+        </div>
+    </div>
+
+    <header class="hero" id="hero">
+        <div class="hero-bg"></div>
+        <p class="hero-subtitle">Con mucha alegría, queremos invitarte a celebrar nuestra boda</p>
+        <h1>Sonia & Sergio</h1>
+        <p class="date">25 Abril 2026</p>
+        <div class="scroll-indicator"
+            onclick="document.getElementById('countdown').scrollIntoView({behavior: 'smooth'})">
+            &#x2193; <!-- Flecha hacia abajo -->
+        </div>
+    </header>
+
+    <section id="countdown" class="countdown-section" data-aos="fade-up" data-aos-duration="1000">
+        <h2>Faltan...</h2>
+
+        <div class="countdown-container" id="countdown-timer">
+            <div class="time-box">
+                <span id="days">00</span>
+                <p>Días</p>
+            </div>
+            <div class="time-box">
+                <span id="hours">00</span>
+                <p>Horas</p>
+            </div>
+            <div class="time-box">
+                <span id="minutes">00</span>
+                <p>Minutos</p>
+            </div>
+            <div class="time-box">
+                <span id="seconds">00</span>
+                <p>Segundos</p>
+            </div>
+        </div>
+
+        <p class="intro-text" style="margin-top: 50px;">El amor se compone de una sola alma que habita en dos cuerpos.
+            Estamos muy felices de unir
+            nuestras vidas y queremos que nos acompañes en este día tan especial.</p>
+    </section>
+
+    <!-- Versículo -->
+    <section class="bible-verse" data-aos="zoom-in" data-aos-duration="1000">
+        <div style="text-align: center; margin-bottom: 20px;">
+            <img src="img_aros_boda.png" alt="Aros de boda"
+                style="width: 120px; height: 120px; object-fit: cover; border-radius: 50%; box-shadow: 0 8px 25px rgba(0,0,0,0.15); border: 2px solid var(--color-gold);">
+        </div>
+        <p class="verse-text" style="font-size: 1.4rem; padding: 0 15px;">
+            "Y si alguien puede prevalecer contra el que está solo, dos lo resistirán. Un cordón de tres hilos no se
+            rompe fácilmente."
+        </p>
+        <p class="verse-ref">ECLESIASTÉS 4:12</p>
+    </section>
+
+    <!-- Sección de Historia y Galería -->
+    <section id="historia" class="historia-section" data-aos="fade-up" data-aos-duration="1000">
+        <h2>Nuestra Historia</h2>
+        <div class="historia-content">
+            <div class="historia-text" data-aos="fade-right" data-aos-delay="200">
+                <p>Nuestra historia comenzó entre las aulas del colegio, donde compartimos desde muy adolescentes una
+                    bella amistad sincera que siempre estuvo abrazada por el amor de Dios. Aunque la vida y nuestros
+                    estudios superiores nos llevaron a ciudades distintas, distanciándonos por un tiempo, el propósito
+                    perfecto de Dios ya estaba escrito para los dos.</p>
+                <p>El destino y Su inmenso amor se encargaron de volver a cruzar nuestros caminos para demostrarnos que
+                    verdaderamente pertenecíamos el uno al otro. Hoy, con los corazones desbordando de alegría y con la
+                    certeza de que Dios siempre fue el lazo invisible entre nosotros, damos este hermoso paso hacia el
+                    altar. ¡Nos emociona muchísimo que nos acompañes a celebrar nuestra unión!</p>
+            </div>
+            <div class="video-container" data-aos="fade-left" data-aos-delay="400">
+                <video src="anillo.mp4" class="video-historia" autoplay loop muted playsinline></video>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Dónde y Cuándo -->
+    <section id="detalles" class="detalles-section">
+        <h2>Cuándo y Dónde</h2>
+        <div class="detalles-container">
+            <div class="card-detalle">
+                <div class="carousel-venue">
+                    <img src="venue.png" alt="ROCA Y BAMBU" class="icono-detalle venue-img-1">
+                    <img src="vanue3.png" alt="ROCA Y BAMBU" class="icono-detalle venue-img-2">
+                </div>
+                <h3>Ceremonia y Recepción</h3>
+                <p><strong>Día:</strong> 25 de Abril de 2026</p>
+                <p><strong>Lugar:</strong> ROCA Y BAMBÚ - Ecolodge</p>
+                <p><strong>Hora:</strong> 11:00 AM</p>
+                <p>Todo el evento se realizará en el mismo lugar, para que celebremos juntos y sin interrupciones
+                    rodeados de naturaleza.</p>
+                <button class="btn-regalar" onclick="document.getElementById('mapModal').style.display='flex'"
+                    style="margin-top: 15px; width: 100%; border: 1px solid var(--color-gold); background-color: var(--color-white); color: var(--color-gold); padding: 12px; font-size: 1.1rem;">
+                    <i class="fas fa-map-marker-alt"></i> Ver Mapa en Vivo
+                </button>
+            </div>
+            <div class="card-detalle dress-code">
+                <img src="dress.png" alt="Código de Vestimenta" class="icono-detalle">
+                <h3>Código de Vestimenta</h3>
+                <p><strong>Elegante / Semi Formal</strong></p>
+                <p>La novia vestirá de <strong>Blanco</strong> y el novio de <strong>Beige</strong>. Por ello, con mucho
+                    cariño les pedimos evitar por completo estos colores para no coincidir en nuestro día especial.</p>
+                <p>¡Vístanse cómodos para impresionar y disfrutar al máximo!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Regalos -->
+    <section id="regalos" class="regalos-section" data-aos="fade-up">
+        <h2>Mesa de Regalos</h2>
+        <div class="regalos-container" style="display: flex; justify-content: center; width: 100%;">
+            <div class="regalo-card" data-aos="zoom-in" data-aos-delay="100"
+                style="max-width: 450px; padding: 40px; border: 1px solid var(--color-gold);">
+                <div class="regalo-icon" style="margin-bottom: 20px; text-align: center;">
+                    <span
+                        style="display: inline-block; width: 90px; height: 90px; line-height: 90px; border-radius: 50%; background: linear-gradient(135deg, var(--color-green) 0%, #082d30 100%); color: var(--color-gold); font-size: 2.8rem; box-shadow: 0 10px 20px rgba(15, 64, 68, 0.2); border: 2px solid var(--color-gold);">
+                        <i class="fas fa-envelope-open-text"></i>
+                    </span>
+                </div>
+                <h3 style="color: var(--color-green); font-size: 1.8rem; margin-bottom: 20px;">LLuvia de Sobres</h3>
+                <p style="font-size: 1.05rem; line-height: 1.6; margin-bottom: 30px; text-align: justify;">Tu compañía
+                    en este dia tan especial es el mejor regalo que podríamos recibir. Si aun así deseas hacernos un
+                    detalle lo recibiremos con mucha gratitud y cariño.</p>
+
+
+                <button class="btn-submit" onclick="document.getElementById('regalos-modal').style.display='flex'"
+                    style="width: 100%; border-radius: 5px; font-size: 1.15rem; padding: 15px; cursor: pointer; margin-top: 15px;">Ver
+                    Sugerencias</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal de Carrito de Regalos -->
+    <div id="regalos-modal" class="modal" onclick="if(event.target == this) this.style.display='none'">
+        <div class="modal-content" style="max-width: 900px; padding: 30px;">
+            <span class="close-btn"
+                onclick="document.getElementById('regalos-modal').style.display='none'">&times;</span>
+            <h2
+                style="font-size: 2.5rem; margin-bottom: 10px; color: var(--color-gold); font-family: var(--font-primary);">
+                Nuestra Lista de Deseos</h2>
+            <div
+                style="text-align: left; background: #f9f9f9; padding: 15px; border-radius: 10px; margin-bottom: 12px; border-left: 4px solid #FF7800; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
+                <h4 style="color: #FF7800; margin-bottom: 5px; font-size:1.1rem;"><i class="fas fa-university"></i>
+                    BCP</h4>
+                <p style="margin: 3px 0; font-size: 0.95rem;"><strong>Cuenta:</strong> 19198693270069</p>
+                <p style="margin: 3px 0; font-size: 0.95rem;"><strong>CCI:</strong> 00219119869327006952</p>
+            </div>
+
+            <div style="display: flex; justify-content: space-between; gap: 10px; margin-bottom: 25px;">
+                <div
+                    style="text-align: center; border: 1px solid #eee; padding: 10px; border-radius: 10px; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.03); flex: 1;">
+                    <h4 style="color: #74205C; margin-bottom: 5px; font-size: 1rem;"><i class="fas fa-mobile-alt"></i>
+                        Yape</h4>
+                    <p style="font-weight: 800; font-size: 1rem; color: #333;">994 400 662</p>
+                </div>
+                <div
+                    style="text-align: center; border: 1px solid #eee; padding: 10px; border-radius: 10px; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.03); flex: 1;">
+                    <h4 style="color: #08af29e6; margin-bottom: 5px; font-size: 1rem;"><i class="fas fa-mobile-alt"></i>
+                        Plin</h4>
+                    <p style="font-weight: 800; font-size: 1rem; color: #333;">994 400 662</p>
+                </div>
+            </div>
+            <p style="margin-bottom: 25px; font-size: 0.95rem; color: #555; text-align: center;">Cuentas a nombre
+                de: <br><strong style="font-size: 1.2rem; color: var(--color-green);">Sergio Kevin Perez
+                    Nateros</strong></p>
+
+            <div
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 15px; margin-bottom: 10px;">
+                <div class="clickable-gift"
+                    style="background: #fff; border: 2px solid transparent; border-radius: 12px; padding: 25px 15px; text-align: center; box-shadow: 0 4px 10px rgba(0,0,0,0.05); "
+                    onmouseover="this.style.borderColor='var(--color-gold)'"
+                    onmouseout="this.style.borderColor='transparent'">
+                    <img src="img_cama.png"
+                        style="width: 100%; height: 140px; object-fit: cover; border-radius: 8px; margin-bottom: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);"
+                        alt="Cama">
+                    <h4 style="color: var(--color-green); font-size: 1.1rem; margin-bottom: 5px;">Cama</h4>
+
+                </div>
+                <div class="clickable-gift"
+                    style="background: #fff; border: 2px solid transparent; border-radius: 12px; padding: 25px 15px; text-align: center; box-shadow: 0 4px 10px rgba(0,0,0,0.05); "
+                    onmouseover="this.style.borderColor='var(--color-gold)'"
+                    onmouseout="this.style.borderColor='transparent'">
+                    <img src="img_ropero.png"
+                        style="width: 100%; height: 140px; object-fit: cover; border-radius: 8px; margin-bottom: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);"
+                        alt="Ropero">
+                    <h4 style="color: var(--color-green); font-size: 1.1rem; margin-bottom: 5px;">Ropero</h4>
+
+                </div>
+                <div class="clickable-gift"
+                    style="background: #fff; border: 2px solid transparent; border-radius: 12px; padding: 25px 15px; text-align: center; box-shadow: 0 4px 10px rgba(0,0,0,0.05); "
+                    onmouseover="this.style.borderColor='var(--color-gold)'"
+                    onmouseout="this.style.borderColor='transparent'">
+                    <img src="img_lavaseca.png"
+                        style="width: 100%; height: 140px; object-fit: cover; border-radius: 8px; margin-bottom: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);"
+                        alt="Lavaseca">
+                    <h4 style="color: var(--color-green); font-size: 1.1rem; margin-bottom: 5px;">Lavaseca</h4>
+
+                </div>
+                <div class="clickable-gift"
+                    style="background: #fff; border: 2px solid transparent; border-radius: 12px; padding: 25px 15px; text-align: center; box-shadow: 0 4px 10px rgba(0,0,0,0.05); "
+                    onmouseover="this.style.borderColor='var(--color-gold)'"
+                    onmouseout="this.style.borderColor='transparent'">
+                    <img src="img_juego_muebles.png"
+                        style="width: 100%; height: 140px; object-fit: cover; border-radius: 8px; margin-bottom: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);"
+                        alt="Juego de Muebles">
+                    <h4 style="color: var(--color-green); font-size: 1.1rem; margin-bottom: 5px;">Juego de Muebles</h4>
+
+                </div>
+                <div class="clickable-gift"
+                    style="background: #fff; border: 2px solid transparent; border-radius: 12px; padding: 25px 15px; text-align: center; box-shadow: 0 4px 10px rgba(0,0,0,0.05); "
+                    onmouseover="this.style.borderColor='var(--color-gold)'"
+                    onmouseout="this.style.borderColor='transparent'">
+                    <img src="img_cocina.png"
+                        style="width: 100%; height: 140px; object-fit: cover; border-radius: 8px; margin-bottom: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);"
+                        alt="Cocina">
+                    <h4 style="color: var(--color-green); font-size: 1.1rem; margin-bottom: 5px;">Cocina</h4>
+
+                </div>
+                <div class="clickable-gift"
+                    style="background: #fff; border: 2px solid transparent; border-radius: 12px; padding: 25px 15px; text-align: center; box-shadow: 0 4px 10px rgba(0,0,0,0.05); "
+                    onmouseover="this.style.borderColor='var(--color-gold)'"
+                    onmouseout="this.style.borderColor='transparent'">
+                    <img src="img_refrigeradora.png"
+                        style="width: 100%; height: 140px; object-fit: cover; border-radius: 8px; margin-bottom: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);"
+                        alt="Refrigeradora">
+                    <h4 style="color: var(--color-green); font-size: 1.1rem; margin-bottom: 5px;">Refrigeradora</h4>
+
+                </div>
+                <div class="clickable-gift"
+                    style="background: #fff; border: 2px solid transparent; border-radius: 12px; padding: 25px 15px; text-align: center; box-shadow: 0 4px 10px rgba(0,0,0,0.05); "
+                    onmouseover="this.style.borderColor='var(--color-gold)'"
+                    onmouseout="this.style.borderColor='transparent'">
+                    <img src="img_juego_mesa.png"
+                        style="width: 100%; height: 140px; object-fit: cover; border-radius: 8px; margin-bottom: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);"
+                        alt="Juego de Mesa">
+                    <h4 style="color: var(--color-green); font-size: 1.1rem; margin-bottom: 5px;">Juego de Mesa</h4>
+
+                </div>
+                <div class="clickable-gift"
+                    style="background: #fff; border: 2px solid transparent; border-radius: 12px; padding: 25px 15px; text-align: center; box-shadow: 0 4px 10px rgba(0,0,0,0.05); "
+                    onmouseover="this.style.borderColor='var(--color-gold)'"
+                    onmouseout="this.style.borderColor='transparent'">
+                    <img src="img_colchon.png"
+                        style="width: 100%; height: 140px; object-fit: cover; border-radius: 8px; margin-bottom: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);"
+                        alt="Colchón">
+                    <h4 style="color: var(--color-green); font-size: 1.1rem; margin-bottom: 5px;">Colchón</h4>
+
+                </div>
+                <div class="clickable-gift"
+                    style="background: #fff; border: 2px solid transparent; border-radius: 12px; padding: 25px 15px; text-align: center; box-shadow: 0 4px 10px rgba(0,0,0,0.05); "
+                    onmouseover="this.style.borderColor='var(--color-gold)'"
+                    onmouseout="this.style.borderColor='transparent'">
+                    <img src="img_televisor.png"
+                        style="width: 100%; height: 140px; object-fit: cover; border-radius: 8px; margin-bottom: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);"
+                        alt="Televisor">
+                    <h4 style="color: var(--color-green); font-size: 1.1rem; margin-bottom: 5px;">Televisor</h4>
+
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 15px;">
+                <button class="btn-regalar" onclick="document.getElementById('regalos-modal').style.display='none'"
+                    style="padding: 12px 30px; font-size: 1.1rem; border:1px solid var(--color-gold); background:white; color:var(--color-gold); ">Cerrar
+                    Sugerencias</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- RSVP Section -->
+    <section id="rsvp" class="rsvp-section" data-aos="fade-up">
+        <h2>Confirmar Asistencia</h2>
+        <p class="intro-text" style="text-align: center; margin-bottom: 30px;">Por favor, confírmanos tu asistencia
+            antes del 15 de Abril del 2026.</p>
+
+        <div style="text-align: center; margin-top: 40px;" data-aos="zoom-in-up">
+            <a href="https://wa.me/51994400662?text=¡Hola!%20Confirmo%20mi%20asistencia%20a%20su%20boda."
+                target="_blank"
+                style="display: inline-block; background-color: #25D366; color: white; padding: 18px 40px; font-size: 1.25rem; font-family: var(--font-secondary); border-radius: 50px; text-decoration: none; box-shadow: 0 10px 20px rgba(37, 211, 102, 0.3); transition: transform 0.3s ease;">
+                <i class="fab fa-whatsapp" style="font-size: 1.6rem; vertical-align: middle; margin-right: 10px;"></i>
+                <strong style="vertical-align: middle;">Confirmar por WhatsApp</strong>
+            </a>
+            <p style="margin-top: 25px; font-size: 0.95rem; color: var(--color-cream); font-style: italic;">Haz clic en
+                el botón para enviarnos un mensaje directo.</p>
+        </div>
+    </section>
+
+
+
+
+
+    <!-- MODAL MAPA GOOGLE -->
+    <div id="mapModal" class="modal" onclick="if(event.target == this) this.style.display='none'">
+        <div class="modal-content" style="max-width: 600px; padding: 20px;">
+            <span class="close-btn" onclick="document.getElementById('mapModal').style.display='none'">&times;</span>
+            <h3 style="color: var(--color-gold); margin-bottom: 20px;">Ubicación del Evento</h3>
+            <div
+                style="width: 100%; height: 400px; border-radius: 10px; overflow: hidden; border: 2px solid var(--color-gold);">
+                <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+                    src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=es&amp;q=HOTEL%20Y%20RESTAURANT%20ROCA%20Y%20BAMBU,%20Peru&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+            </div>
+            <p style="margin-top: 15px; font-size: 0.95rem; font-family: var(--font-secondary);">ROCA Y BAMBU - Las
+                Palmas 10120, Perú</p>
+            <p style="margin-top: 5px; font-size: 0.8rem; color: #666;">Interactivo: Puedes alejar, acercar o moverte
+                por el mapa.</p>
+        </div>
+    </div>
+
+    <!-- Audio Local Oculto -->
+    <audio id="local-audio" src="music_boda.mp3" preload="auto" loop></audio>
+
+    <!-- AOS Animation JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+    <script>
+        // Inicializar las animaciones al hacer scroll
+        AOS.init({
+            once: true, // La animación ocurre solo una vez
+            offset: 100 // Empieza a animar un poco antes de que el elemento aparezca
+        });
+    </script>
+</body>
+
+</html>
